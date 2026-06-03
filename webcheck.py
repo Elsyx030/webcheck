@@ -1,6 +1,8 @@
-import requests 
+import requests
 
-r = requests.\
-    get("https://www.google.com")
+url = "https://www.google.com"
 
-print("Status ", r.status_code)
+response = requests.get(url, timeout=5)
+
+print("URL:", url)
+print("Status:", response.status_code)
